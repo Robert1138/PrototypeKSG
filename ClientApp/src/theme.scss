@@ -1,0 +1,11 @@
+
+@import '~@angular/material/theming';
+$primary: mat-palette($mat-blue-grey);
+
+
+.my_tab_group {
+  color: 1px solid mat-color($primary);
+}
+
+
+
