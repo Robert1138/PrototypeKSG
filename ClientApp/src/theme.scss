@@ -1,10 +1,38 @@
 
 @import '~@angular/material/theming';
-$primary: mat-palette($mat-blue-grey);
+//@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 
-.my_tab_group {
-  color: 1px solid mat-color($primary);
+
+//@include mat-core();
+
+
+$default-theme: mat-light-theme(mat-palette($mat-blue),mat-palette($mat-grey),mat-palette($mat-red));
+$form-theme: mat-dark-theme(mat-palette($mat-grey),mat-palette($mat-grey),mat-palette($mat-blue));
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Roboto, monospace',
+
+);
+
+
+.default-theme {
+
+    @include mat-core();
+
+    @include mat-stepper-theme($default-theme);
+
+   @include angular-material-theme($default-theme);
+   @include mat-button-theme($default-theme);
+
+   
+}
+
+.form-theme {
+    @include mat-core();
+    @include mat-stepper-theme($default-theme);
+    @include mat-form-field-theme($form-theme);
+
 }
 
 
